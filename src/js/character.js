@@ -10,30 +10,12 @@ export default class Character {
         throw new Error('Некорректный тип персонажа');
     }
 
-    const attackObj = {
-        'Bowman': 25,
-        'Swordsman': 40,
-        'Magician': 10,
-        'Daemon': 10,
-        'Undead': 25,
-        'Zombie': 40
-    };
-
-    const defenceObj = {
-        'Bowman': 25,
-        'Swordsman': 10,
-        'Magician': 40,
-        'Daemon': 40,
-        'Undead': 25,
-        'Zombie': 10
-    };
-
     this.name = name;
     this.type = type;
     this.health = 100;
     this.level = 1;
-    this.attack = attackObj[type];
-    this.defence = defenceObj[type];
+    this.attack = undefined;
+    this.defence = undefined;
     }
 
     levelUp() {
